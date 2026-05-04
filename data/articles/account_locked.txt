@@ -1,0 +1,8 @@
+Title: Account Locked or Suspended
+Category: Account
+Tags: locked, suspended, access
+
+Your account may be locked after 5 failed login attempts.
+Wait 30 minutes and try again, or click "Unlock Account" in the login page.
+If suspended due to policy violation, contact support with your account ID.
+Provide a valid ID proof if requested during the verification process.

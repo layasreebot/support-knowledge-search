@@ -1,0 +1,7 @@
+Title: Escalation SOP
+Category: SOP
+
+Step 1: Try resolving the issue using knowledge base articles.
+Step 2: If unresolved in 10 minutes, escalate to Tier 2 support.
+Step 3: Send escalation email with ticket ID, issue summary, and steps tried.
+Step 4: Follow up with customer within 2 hours of escalation.

@@ -1,0 +1,8 @@
+Title: Resolving Billing Issues
+Category: Billing
+Tags: billing, payment, refund, invoice
+
+For billing issues, first check your payment method is valid and not expired.
+If you were charged incorrectly, raise a refund request within 7 days.
+Refunds are processed in 5-7 business days back to your original payment method.
+For invoice copies, go to Settings > Billing > Download Invoice.

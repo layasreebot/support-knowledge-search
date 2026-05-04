@@ -1,0 +1,4 @@
+Ticket ID: TKT-001
+Issue: Customer unable to login after password reset
+Status: Resolved
+Resolution: Asked customer to clear browser cache and try again. Issue resolved.

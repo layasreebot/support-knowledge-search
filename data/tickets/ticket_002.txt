@@ -1,0 +1,4 @@
+Ticket ID: TKT-002
+Issue: Customer was charged twice for the same order
+Status: Resolved
+Resolution: Verified duplicate charge in payment gateway. Refund initiated within 24 hours.
