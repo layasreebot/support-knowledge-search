@@ -1,0 +1,17 @@
+2026-07-05 00:18:07,my account is locked,"Based on the provided support documents, if your account is locked, you have a few options [1]. 
+
+You can either wait 30 minutes and try logging in again, or click ""Unlock Account"" in the login page. ","account_locked.txt, account_locked.txt, reset_password.txt",No
+2026-07-05 09:56:01,how do i reset my password?,"To reset your password, follow these steps: Go to the login page and click ""Forgot Password"". Enter your registered email address. You will receive a reset link within 5 minutes. Click the link and se","reset_password.txt, reset_password.txt, account_locked.txt",No
+2026-07-05 10:06:48,how do I get a refund?,"To get a refund, first check if you were charged incorrectly. According to document [1], if you were charged incorrectly, you can raise a refund request within 7 days.","billing_issue.txt, ticket_002.txt, reset_password.txt",No
+2026-07-05 10:07:58,what is the escalation process?,"According to our support documents, the escalation process is as follows:
+
+1. First, try resolving the issue using knowledge base articles [2].
+2. If the issue remains unresolved after 10 minutes, it ","escalation_sop.txt, escalation_sop.txt, billing_issue.txt",No
+2026-07-05 10:10:35,what is the weather today?,"I don't have enough information to answer this.
+
+(Note: The provided support documents do not contain any information about weather.)","billing_issue.txt, escalation_sop.txt, account_locked.txt",Yes
+2026-07-05 10:11:25,tell me a joke,"I don't have a support document for telling jokes, so I don't have enough information to answer this.","escalation_sop.txt, ticket_002.txt, account_locked.txt",Yes
+2026-07-05 10:12:38,who is the president?,"I don't have enough information to answer this.
+
+The provided support documents do not contain any information related to the presidency or government positions. They appear to be focused on internal ","escalation_sop.txt, account_locked.txt, billing_issue.txt",Yes
+2026-07-05 10:38:15,who is the president?,"I don't have enough information to answer this. The provided support documents do not mention the president. They cover topics related to account management, billing, and escalation procedures, but no","escalation_sop.txt, account_locked.txt, billing_issue.txt",Yes

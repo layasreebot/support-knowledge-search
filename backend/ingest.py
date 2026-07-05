@@ -1,4 +1,13 @@
 import os
+import sys
+
+# Reconfigure stdout to use UTF-8 to prevent encoding errors on Windows when printing emojis
+if hasattr(sys.stdout, 'reconfigure'):
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
 from dotenv import load_dotenv
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
