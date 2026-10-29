@@ -1,30 +1,53 @@
 # 🔍 Support Knowledge Search
 
-A Generative AI-powered semantic search system that helps users find relevant information from support articles, tickets, and Standard Operating Procedures (SOPs).
+**A Semantic Search System for Support Knowledge using Generative AI**
+
+[![Python](https://img.shields.io/badge/Python-3.x-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688.svg)](https://fastapi.tiangolo.com/)
+[![LangChain](https://img.shields.io/badge/Framework-LangChain-green.svg)](https://www.langchain.com/)
+[![Git](https://img.shields.io/badge/Version%20Control-Git-orange.svg)](https://git-scm.com/)
 
 ## 📌 Project Overview
 
-**Support Knowledge Search** is a semantic search application designed to improve the way users discover and retrieve support-related information. Instead of relying only on exact keyword matches, it uses text embeddings to understand the meaning of a user's query and retrieve relevant documents.
+Support Knowledge Search is a Generative AI-focused application designed to help users find relevant information from support-related knowledge sources efficiently.
 
-The project combines a FastAPI backend, LangChain for language-model application workflows, and Streamlit for an interactive user interface.
+Traditional keyword-based search may fail when a user's query uses different words from the original document. Semantic search addresses this limitation by representing text as embeddings and retrieving content based on semantic similarity.
+
+This project explores semantic search, document retrieval, and GenAI application development using Python-based technologies.
+
+## 🎯 Problem Statement
+
+Support information is often distributed across documents, FAQs, troubleshooting guides, and knowledge articles. Finding the right information manually can consume time and effort.
+
+The goal of this project is to develop a search system that helps users discover relevant support information through natural-language queries and semantic retrieval.
 
 ## 🎯 Objectives
 
-- Enable meaning-based search across support documents.
-- Reduce the time required to find relevant support information.
-- Provide relevant results with highlighted matching content.
-- Support filtering and source-document references.
-- Build a foundation for a GenAI-powered support assistant.
+- Improve access to support-related knowledge.
+- Retrieve information based on query meaning.
+- Explore text embeddings and vector similarity search.
+- Build an interactive interface for searching support information.
+- Establish a foundation for future Retrieval-Augmented Generation (RAG) capabilities.
 
 ## ✨ Key Features
 
-- **Semantic Search:** Retrieve relevant content based on query meaning.
-- **Embedding-Based Indexing:** Convert text into vector representations for similarity search.
-- **Interactive Search UI:** Search and explore results through Streamlit.
-- **Document Filtering:** Narrow results using available metadata.
-- **Result Highlighting:** Make relevant text easier to identify.
-- **Source References:** Help users trace results back to their original documents.
-- **Question Answering:** Provide a foundation for answering questions using support knowledge.
+- **Semantic Search:** Retrieve relevant content based on the meaning of a query.
+- **Document Retrieval:** Find useful information from an indexed knowledge collection.
+- **Embedding-Based Search:** Represent text as vectors for similarity comparison.
+- **Interactive Interface:** Provide a user-friendly way to enter queries and view results.
+- **Extensible Architecture:** Allow future integration of additional knowledge sources and AI-powered question answering.
+
+> Features depend on the functionality implemented in the current version of the project.
+
+## 🏗️ System Workflow
+
+1. **Knowledge Collection:** Gather support articles and other relevant documents.
+2. **Text Preprocessing:** Clean and split document content into manageable chunks.
+3. **Embedding Generation:** Convert text chunks into vector representations.
+4. **Indexing:** Store vectors in a suitable search index or vector database.
+5. **Query Input:** Receive a user's search question.
+6. **Semantic Retrieval:** Identify relevant content using similarity search.
+7. **Result Presentation:** Display the retrieved information to the user.
 
 ## 🛠️ Technology Stack
 
@@ -32,47 +55,43 @@ The project combines a FastAPI backend, LangChain for language-model application
 |---|---|
 | Python | Core programming language |
 | FastAPI | Backend API development |
-| LangChain | LLM and retrieval workflows |
-| Streamlit | Interactive web interface |
-| FAISS / Chroma | Vector storage and similarity search |
+| LangChain | Language-model and retrieval workflows |
+| Streamlit | Interactive web interface, if used by the current implementation |
+| FAISS / Chroma | Vector search and storage options |
 | Text Embeddings | Semantic representation of documents |
 | Git & GitHub | Version control and project hosting |
 
-## ⚙️ How It Works
+Only the technologies actually configured in the repository should be considered part of the implemented stack.
 
-1. **Document Collection:** Collect support articles, tickets, and SOPs.
-2. **Text Processing:** Extract and prepare document content for indexing.
-3. **Embedding Generation:** Convert text chunks into vector embeddings.
-4. **Vector Indexing:** Store embeddings in FAISS or Chroma.
-5. **User Query:** Accept a question or search phrase through the interface.
-6. **Semantic Retrieval:** Retrieve documents that are semantically relevant to the query.
-7. **Result Display:** Display relevant content, highlights, and source references.
+## ⚙️ Prerequisites
 
-## 🚀 Getting Started
+Install the following before running the application:
 
-### Prerequisites
+- Python 3
+- Git
+- Visual Studio Code (recommended)
+- Project dependencies listed in `requirements.txt`, if available
 
-- Python installed on your system.
-- Visual Studio Code (recommended).
-- Git installed and configured.
-- Required Python packages for the project.
+If the frontend uses Streamlit, install its dependencies in the same Python environment unless the project specifies otherwise.
+
+## 🚀 Installation and Setup
 
 ### 1. Clone the Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd <YOUR_PROJECT_FOLDER>
+git clone https://github.com/layasreebot/support-knowledge-search.git
+cd support-knowledge-search
 ```
-
-Replace the placeholders with your actual GitHub repository URL and folder name.
 
 ### 2. Create a Virtual Environment
 
-```bash
+On Windows PowerShell:
+
+```powershell
 python -m venv .venv
 ```
 
-Activate it on Windows PowerShell:
+Activate it:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
@@ -80,37 +99,69 @@ Activate it on Windows PowerShell:
 
 ### 3. Install Dependencies
 
-If your repository contains a `requirements.txt` file, run:
+If `requirements.txt` exists in the repository root:
 
-```bash
-pip install -r requirements.txt
+```powershell
+python -m pip install -r requirements.txt
 ```
+
+If dependencies are maintained separately for the backend and frontend, install them according to their respective configuration files.
 
 ### 4. Configure Environment Variables
 
-If your project uses an LLM provider or API keys, configure them using a `.env` file according to your project setup.
+If the application requires API keys or other environment variables:
 
-**Important:** Never commit API keys, passwords, or other secrets to GitHub.
+1. Check whether an `.env.example` file exists.
+2. Create a local `.env` file using the documented configuration.
+3. Add the required values.
+4. Never commit API keys, passwords, or secrets to GitHub.
 
-### 5. Run the Application
+## ▶️ Running the Application
 
-The exact commands depend on your project structure.
+The following are common development commands. Check the actual entry-point filenames in your repository before running them.
 
-For a typical FastAPI application:
+### Backend — FastAPI
 
-```bash
-uvicorn main:app --reload
+Open a terminal at the project root, activate the virtual environment, and run the command matching your backend entry point.
+
+If the entry point is `backend/main.py` and it exposes an object named `app`:
+
+```powershell
+python -m uvicorn backend.main:app --reload
 ```
 
-For a typical Streamlit application:
+If the backend uses a different module path, update the command accordingly.
 
-```bash
-streamlit run app.py
+After the server starts, open:
+
+- API root: `http://127.0.0.1:8000/`
+- Interactive API documentation: `http://127.0.0.1:8000/docs`
+
+### Frontend — Streamlit
+
+Open a second terminal and activate the required virtual environment.
+
+If the frontend entry point is `frontend/app.py`:
+
+```powershell
+python -m streamlit run frontend/app.py
 ```
 
-Replace `main:app` and `app.py` with the actual module and file names in your repository. Run the backend and frontend in separate terminals if your project uses separate applications.
+If the project uses a different Streamlit entry point, replace the path with the correct filename.
 
-## 📁 Suggested Project Structure
+The terminal will display the local URL for the interface, commonly `http://localhost:8501`.
+
+### Verify the Application
+
+1. Confirm that the backend starts without errors.
+2. Open the FastAPI documentation page if FastAPI is configured.
+3. Start the frontend in a separate terminal if required.
+4. Enter a sample support-related query.
+5. Check whether the application returns relevant search results.
+
+## 📁 Project Structure
+
+The structure below is illustrative. Adjust it to match the actual repository.
 
 ```text
 support-knowledge-search/
@@ -118,41 +169,49 @@ support-knowledge-search/
 │   ├── main.py
 │   └── ...
 ├── frontend/
+│   ├── app.py
 │   └── ...
 ├── data/
 │   └── ...
 ├── requirements.txt
-├── .env.example
 ├── .gitignore
 └── README.md
 ```
 
-This is an example structure; adapt it to your actual project files.
-
 ## 🔮 Future Enhancements
 
-- Retrieval-Augmented Generation (RAG) for context-aware answers.
-- Support for multiple document formats.
-- Advanced metadata-based filtering.
-- Search result ranking and reranking.
-- Evaluation of retrieval quality and answer faithfulness.
-- Conversation history and memory.
-- Authentication and role-based access control.
+- Retrieval-Augmented Generation (RAG) for grounded answers.
+- Support for PDF, DOCX, and other document formats.
+- Improved semantic ranking and metadata filtering.
+- Source references for retrieved information.
+- Retrieval evaluation using suitable quality metrics.
+- Automated testing and deployment.
+- Integration with additional support knowledge sources.
 
-## 🎓 Project Information
+## 🧪 Testing
 
-- **Project Name:** Support Knowledge Search
-- **Category:** Semantic Search Systems
-- **Domain:** Support
-- **Focus Area:** Generative AI (GenAI)
-- **Project Type:** AI-powered information retrieval system
+Run the project's existing tests if a test suite is available.
+
+For a FastAPI application, the interactive API documentation at `/docs` can help verify available endpoints.
+
+Automated test commands should follow the project's configured test framework.
+
+## 🔐 Security
+
+- Store secrets in environment variables.
+- Keep `.env` files out of version control.
+- Do not upload confidential support documents or private user data.
+- Validate inputs and handle errors appropriately.
 
 ## 👩‍💻 Author
 
-**Layasree**
-
-B.Tech – Information Technology
+**Layasree**  
+B.Tech — Information Technology
 
 ## 📄 License
 
-This project is intended for educational and development purposes. Add a suitable open-source license if you plan to distribute the project publicly.
+No license has been specified here. Add a suitable license file if you intend to distribute the project for reuse.
+
+---
+
+*Support Knowledge Search — exploring semantic search and Generative AI for more effective knowledge retrieval.*
